@@ -1,13 +1,9 @@
-import Welcome from "./components/WelcomPage";
 import { useEffect, useState } from "react";
-import { Route, Routes } from "react-router-dom";
-import "./App.css";
+const [counter, setCounter] = useState(0);
+const [dogs, setDogs] = useState("dog");
 
-function App() {
-  const [counter, setCounter] = useState(0);
-  const [dogs, setDogs] = useState("dog");
-
-  const fetchDogs = () => {
+const FetchDogs = () => {
+  const fetchDog = () => {
     fetch("https://api.jsonbin.io/v3/b/6422b9c8c0e7653a0597d126")
       .then((response) => {
         return response.json();
@@ -17,15 +13,11 @@ function App() {
         console.log("här", data);
       });
   };
-
   useEffect(() => {
-    fetchDogs();
+    fetchDog();
   }, []);
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Welcome />} />
-      </Routes>
+    <div>
       <img src={dogs[counter].img} alt="" />
       <h1>Name: {dogs[counter].name}</h1>
       <h1>Sex: {dogs[counter].sex}</h1>
@@ -41,6 +33,5 @@ function App() {
       </button>
     </div>
   );
-}
-
-export default App;
+};
+export default FetchDogs;
