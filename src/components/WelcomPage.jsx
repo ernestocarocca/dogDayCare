@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Welcome = (props) => {
   return (
     <section>
-      <h1>welcome to the Dog Daycare</h1>
-      <p>vill du gå till hundsidan?</p>;
+      <h1>Welcome to the Dog Daycare</h1>
+      <p>Go over to the Dogside</p>
       <Link to="/fetchDogs">
-        <button>ja!</button>
+        <button>Yes!</button>
       </Link>
     </section>
   );

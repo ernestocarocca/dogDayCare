@@ -18,7 +18,7 @@ const FetchDogs = (props) => {
     fetchDog();
   }, []);
   return (
-    <div>
+    <div className="showDog">
       <img src={dogs[counter].img} alt="" />
       <h1>Name: {dogs[counter].name}</h1>
       <h1>Sex: {dogs[counter].sex}</h1>
