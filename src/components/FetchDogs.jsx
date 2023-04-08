@@ -1,3 +1,4 @@
+import "./styleFetchD.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -19,7 +20,7 @@ const FetchDogs = (props) => {
   }, []);
   return (
     <div className="showDog">
-      <img src={dogs[counter].img} alt="" />
+      <img src={dogs[counter].img} alt="img" />
       <h1>Name: {dogs[counter].name}</h1>
       <h1>Sex: {dogs[counter].sex}</h1>
       <h1> Breed: {dogs[counter].breed}</h1>
