@@ -14,7 +14,7 @@ const Welcome = (props) => {
       <h1>Welcome to the Dog Daycare</h1>
       <p>Go over to the Dogside</p>
       <Link to="/fetchDogs">
-        <button>Yes!</button>
+        <button className="Button">Yes!</button>
       </Link>
     </section>
   );

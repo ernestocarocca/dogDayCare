@@ -9,3 +9,17 @@
 .welcome img {
   grid-template-columns: repeat(1, 1fr);
 }
+.welcome h1 {
+  background-image: url("./img/hund2.jpg");
+  color: white;
+  border-radius: 65px;
+}
+.welcome .Button {
+  font-size: 18px;
+  border-radius: 90px;
+}
+.welcome p {
+  color: black;
+  font-size: 20px;
+  font-style: bold;
+}
