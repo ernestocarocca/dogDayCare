@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const FetchDogs = (props) => {
   const [counter, setCounter] = useState(0);
-  const [dogs, setDogs] = useState("dog");
+  const [dogs, setDogs] = useState([]);
   const fetchDog = () => {
     fetch("https://api.jsonbin.io/v3/b/6422b9c8c0e7653a0597d126")
       .then((response) => {
