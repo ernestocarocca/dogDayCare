@@ -44,7 +44,9 @@ const FetchDogs = (props) => {
         {dogs.map((dog, index) => (
           <li key={index}>
             <img src={dog.img} alt="img" />
-            <h1>Name: {dog.name}</h1>
+            <Link to="/dogDetail">
+              <button className="Button">{dog.name}</button>
+            </Link>
           </li>
         ))}
       </ul>
