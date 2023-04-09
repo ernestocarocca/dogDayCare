@@ -11,28 +11,43 @@ const FetchDogs = (props) => {
         return response.json();
       })
       .then((data) => {
-        setDogs(data.record); // sätt dogs till = dogArray
-        console.log("här", data);
+        // setDogs(data.record); // sätt dogs till = dogArray
+        setDogs(data.record);
+
+        console.log("här", dogs);
       });
   };
   useEffect(() => {
     fetchDog();
   }, []);
-  return (
-    <div className="showDog">
-      <img src={dogs[counter].img} alt="img" />
-      <h1>Name: {dogs[counter].name}</h1>
-      <h1>Sex: {dogs[counter].sex}</h1>
-      <h1> Breed: {dogs[counter].breed}</h1>
-      <h1>Age:{dogs[counter].age}</h1>
-      <h1>Chip Number{dogs[counter].chipNumber}</h1>
-      <button
-        onClick={() => {
-          setCounter((counter + 1) % dogs.length);
-        }}
+
+  //<img src={dogs[counter].img} alt="img" />
+
+  /*<h1>Sex: {dogs[counter].sex}</h1>
+  <h1> Breed: {dogs[counter].breed}</h1>
+  <h1>Age:{dogs[counter].age}</h1>
+  <h1>Chip Number{dogs[counter].chipNumber}</h1>
+  <button
+    onClick={() => {
+      setCounter((counter + 1) % dogs.length);
+   }
       >
         Next Dog
       </button>
+   
+    <img src={dogs[length - 1].img} alt="img" />
+    }*/
+
+  return (
+    <div className="showDog">
+      <ul>
+        {dogs.map((dog, index) => (
+          <li key={index}>
+            <img src={dog.img} alt="img" />
+            <h1>Name: {dog.name}</h1>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
