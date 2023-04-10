@@ -1,18 +1,17 @@
 import Welcome from "./components/WelcomPage";
 import FetchDogsComp from "./components/FetchDogs";
-import dogDetail from "./components/DogDetail";
+import DogDetail from "./components/DogDetail";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import dogDetail from "./components/dogDetail";
-
+import FetchDogs from "./components/FetchDogs";
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/fetchDogs" element={<FetchDogsComp />} />
-        <Route path="/dogInfo" element={<dogDetail />} />
+        <Route path="/dogDetail/:dogName" element={<DogDetail />} />
       </Routes>
     </div>
   );

@@ -10,17 +10,35 @@
   border-radius: 95px;
   grid-template-rows: repeat(100, 20em);
 }
-.showDog {
-  font-size: 10px;
-}
-.showDog li {
+.dogList {
   width: 100%;
-  height: 100%;
-
-  border: 2px solid gray;
-  border-radius: 1em;
-  margin: 0.5em;
+  background-color: wheat;
+  font-family: Arial, sans-serif;
+  color: white;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
 }
-.showDog li :hover {
-  color: aqua;
+
+.dogList::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("./img/hund2.jpg");
+  background-size: cover;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.dogList {
+  margin-bottom: 10px;
+  transition: transform 0.3s ease-in-out; /* Lägg till övergångseffekt för transformeringen */
+}
+
+.dogList:hover {
+  transform: scale(1.1); /* Skala upp listelementet vid hovringseffekten */
+  z-index: 1; /* Placera listelementet överst i högen för att det ska sticka fram */
 }

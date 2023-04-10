@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./styleFetchD.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -13,8 +14,6 @@ const FetchDogs = (props) => {
       .then((data) => {
         // setDogs(data.record); // sätt dogs till = dogArray
         setDogs(data.record);
-
-        console.log("här", dogs);
       });
   };
   useEffect(() => {
@@ -34,18 +33,19 @@ const FetchDogs = (props) => {
       >
         Next Dog
       </button>
-   
+  
     <img src={dogs[length - 1].img} alt="img" />
+      
     }*/
 
   return (
     <div className="showDog">
       <ul>
         {dogs.map((dog, index) => (
-          <li key={index}>
+          <li className="dogList" key={index}>
             <img src={dog.img} alt="img" />
-            <Link to="/dogDetail">
-              <button className="Button">{dog.name}</button>
+            <Link to={`/dogDetail/${encodeURIComponent(JSON.stringify(dog))}`}>
+              {dog.name}
             </Link>
           </li>
         ))}
