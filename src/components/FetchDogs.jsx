@@ -23,17 +23,17 @@ const FetchDogs = (props) => {
   //<img src={dogs[counter].img} alt="img" />
 
   return (
-    <div>
+    <div className="showDogs">
       {dogs.map((dog, index) => (
-        <>
+        <div>
           <img src={dog.img} alt="img" />
           <Link
             to={`/dogDetail/${encodeURIComponent(JSON.stringify(dog))}`}
             className="dog-link"
           >
-            {dog.name}
+            <button> {dog.name}</button>
           </Link>
-        </>
+        </div>
       ))}
     </div>
   );

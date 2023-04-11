@@ -1,18 +1,21 @@
 body {
-  width: 100%;
   background: linear-gradient(4deg, #d2001a, #7462ff);
   background-repeat: repeat;
   background-attachment: fixed;
 }
-.listShow img {
-  width: 100px;
-  height: 100px;
+.showDogs img {
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.listShow {
+.showDogs img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+.showDogs {
   display: grid;
   padding: 1em;
   gap: 1em;
-
   grid-template-columns: repeat(3, 1fr);
 }
