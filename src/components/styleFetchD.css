@@ -3,46 +3,43 @@ body {
   background-repeat: repeat;
   background-attachment: fixed;
 }
-.showDogs img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-.showDogs img:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
-}
+
 .showDogs {
   display: grid;
   padding: 1em;
   gap: 1em;
   object-fit: cover;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
 }
+
 .showDogs img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: auto;
   object-fit: cover;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .showDogs img:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: none;
+  box-shadow: none;
 }
 
 /* Media query för mobila enheter med en maxbredd på 768px */
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .showDogs {
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Återställ grid-template-columns för större skärmar */
+  }
+
   .showDogs img {
-    /* Justera storleken för mobila enheter */
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 250px;
   }
 
   .showDogs img:hover {
-    /* Ändra hover-effekten för mobila enheter */
-    transform: none;
-    box-shadow: none;
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   }
 }

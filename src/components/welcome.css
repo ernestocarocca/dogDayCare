@@ -1,54 +1,47 @@
+/* Gemensam stil för större skärmar */
 .welcome img {
   width: 350px;
   height: 500px;
   object-fit: cover;
 }
+
 .welcome img {
   display: inline;
 }
+
 .welcome img {
   grid-template-columns: repeat(1, 1fr);
 }
+
 .welcome h1 {
   background-image: url("./img/hund2.jpg");
   color: white;
   border-radius: 65px;
 }
+
 .welcome .Button {
   font-size: 18px;
   border-radius: 90px;
 }
+
 .welcome p {
   color: black;
   font-size: 20px;
   font-style: bold;
 }
+
 .welcome img {
   width: 350px;
   height: 500px;
   object-fit: cover;
   display: inline;
-  transition: transform 0.1s ease-in-out; /* Lägg till övergångseffekt för transformeringen */
+  transition: transform 0.1s ease-in-out;
 }
 
 .welcome img:hover {
-  transform: scale(1.05); /* Skala upp bilden vid hovringseffekten */
+  transform: scale(1.05);
   z-index: 1;
 }
-.welcome h1 {
-  background-image: linear-gradient(to right, red, yellow, blue);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  border-radius: 65px;
-  position: relative;
-  overflow: hidden;
-}
-.welcome img {
-  width: 100%; /* Ändra bredden till 100% för att anpassa till mobilskärm */
-  max-height: 300px; /* Använd maxhöjd istället för höjd för att säkerställa att bilden inte blir för stor på mobila enheter */
-  object-fit: cover;
-}
 
 .welcome h1 {
   background-image: linear-gradient(to right, red, yellow, blue);
@@ -58,31 +51,37 @@
   border-radius: 65px;
   position: relative;
   overflow: hidden;
-  font-size: 24px; /* Ändra fontstorlek för att passa mobilskärm */
 }
 
-.welcome .Button {
-  font-size: 14px; /* Ändra fontstorlek för att passa mobilskärm */
-  border-radius: 90px;
-}
+/* Mediaförfrågan för mobil anpassad visning */
+@media screen and (max-width: 767px) {
+  .welcome img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
 
-.welcome p {
-  color: black;
-  font-size: 16px; /* Ändra fontstorlek för att passa mobilskärm */
-  font-weight: bold; /* Använd font-weight istället för font-style för fet text */
-}
+  .welcome img:not(:nth-child(2)) {
+    display: none;
+  }
 
-/* Lägg till en media query för att anpassa stilar för mobila enheter med en maxbredd på t.ex. 768px (kan anpassas efter behov) */
-@media (max-width: 768px) {
   .welcome h1 {
-    font-size: 18px; /* Ändra fontstorlek för att passa mobilskärm */
+    font-size: 24px;
+    border-radius: 0;
   }
 
   .welcome .Button {
-    font-size: 12px; /* Ändra fontstorlek för att passa mobilskärm */
+    font-size: 14px;
+    border-radius: 45px;
   }
 
   .welcome p {
-    font-size: 14px; /* Ändra fontstorlek för att passa mobilskärm */
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .welcome h1::after {
+    content: "";
+    display: none;
   }
 }
