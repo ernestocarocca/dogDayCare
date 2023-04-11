@@ -18,7 +18,7 @@ body {
   padding: 1em;
   gap: 1em;
   object-fit: cover;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .showDogs img {
   width: 250px;

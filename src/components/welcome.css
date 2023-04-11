@@ -44,3 +44,45 @@
   position: relative;
   overflow: hidden;
 }
+.welcome img {
+  width: 100%; /* Ändra bredden till 100% för att anpassa till mobilskärm */
+  max-height: 300px; /* Använd maxhöjd istället för höjd för att säkerställa att bilden inte blir för stor på mobila enheter */
+  object-fit: cover;
+}
+
+.welcome h1 {
+  background-image: linear-gradient(to right, red, yellow, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  border-radius: 65px;
+  position: relative;
+  overflow: hidden;
+  font-size: 24px; /* Ändra fontstorlek för att passa mobilskärm */
+}
+
+.welcome .Button {
+  font-size: 14px; /* Ändra fontstorlek för att passa mobilskärm */
+  border-radius: 90px;
+}
+
+.welcome p {
+  color: black;
+  font-size: 16px; /* Ändra fontstorlek för att passa mobilskärm */
+  font-weight: bold; /* Använd font-weight istället för font-style för fet text */
+}
+
+/* Lägg till en media query för att anpassa stilar för mobila enheter med en maxbredd på t.ex. 768px (kan anpassas efter behov) */
+@media (max-width: 768px) {
+  .welcome h1 {
+    font-size: 18px; /* Ändra fontstorlek för att passa mobilskärm */
+  }
+
+  .welcome .Button {
+    font-size: 12px; /* Ändra fontstorlek för att passa mobilskärm */
+  }
+
+  .welcome p {
+    font-size: 14px; /* Ändra fontstorlek för att passa mobilskärm */
+  }
+}
