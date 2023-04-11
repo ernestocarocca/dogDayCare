@@ -17,5 +17,32 @@ body {
   display: grid;
   padding: 1em;
   gap: 1em;
-  grid-template-columns: repeat(3, 1fr);
+  object-fit: cover;
+  grid-template-columns: repeat(2, 1fr);
+}
+.showDogs img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.showDogs img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Media query för mobila enheter med en maxbredd på 768px */
+@media (max-width: 768px) {
+  .showDogs img {
+    /* Justera storleken för mobila enheter */
+    width: 100%;
+    height: auto;
+  }
+
+  .showDogs img:hover {
+    /* Ändra hover-effekten för mobila enheter */
+    transform: none;
+    box-shadow: none;
+  }
 }

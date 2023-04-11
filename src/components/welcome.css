@@ -33,7 +33,7 @@
 
 .welcome img:hover {
   transform: scale(1.05); /* Skala upp bilden vid hovringseffekten */
-  z-index: 1; /* Placera bilden överst i högen för att den ska poppa upp */
+  z-index: 1;
 }
 .welcome h1 {
   background-image: linear-gradient(to right, red, yellow, blue);
