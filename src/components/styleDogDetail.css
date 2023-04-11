@@ -1,12 +1,4 @@
-.DD {
-  width: 100%;
-  background-image: url("./img/dogNature.jpg");
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-}
-
-.DD:hover {
-  transform: scale(1.1);
+body {
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21);
+  object-fit: cover;
 }

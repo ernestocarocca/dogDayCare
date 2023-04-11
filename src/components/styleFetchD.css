@@ -1,44 +1,15 @@
-.showDog img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.showDog img {
-  display: grid;
-  padding: 1em;
-  gap: 1em;
-  border-radius: 95px;
-  grid-template-rows: repeat(100, 20em);
-}
-.dogList {
+
+body {
+  height: 100vh;
   width: 100%;
-  background-color: wheat;
-  font-family: Arial, sans-serif;
-  color: white;
-  padding: 20px;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(45deg, #d2001a, #7462ff, #f48e21);
+  background-size: 300% 300%;
+  background-repeat: repeat;
 }
-
-.dogList::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("./img/hund2.jpg");
-  background-size: cover;
-  filter: blur(10px);
-  z-index: -1;
-}
-
-.dogList {
-  margin-bottom: 10px;
-  transition: transform 0.3s ease-in-out; /* Lägg till övergångseffekt för transformeringen */
-}
-
-.dogList:hover {
-  transform: scale(1.1); /* Skala upp listelementet vid hovringseffekten */
-  z-index: 1; /* Placera listelementet överst i högen för att det ska sticka fram */
+.showDog li {
 }

@@ -22,29 +22,16 @@ const FetchDogs = (props) => {
 
   //<img src={dogs[counter].img} alt="img" />
 
-  /*<h1>Sex: {dogs[counter].sex}</h1>
-  <h1> Breed: {dogs[counter].breed}</h1>
-  <h1>Age:{dogs[counter].age}</h1>
-  <h1>Chip Number{dogs[counter].chipNumber}</h1>
-  <button
-    onClick={() => {
-      setCounter((counter + 1) % dogs.length);
-   }
-      >
-        Next Dog
-      </button>
-  
-    <img src={dogs[length - 1].img} alt="img" />
-      
-    }*/
-
   return (
     <div className="showDog">
       <ul>
         {dogs.map((dog, index) => (
           <li className="dogList" key={index}>
             <img src={dog.img} alt="img" />
-            <Link to={`/dogDetail/${encodeURIComponent(JSON.stringify(dog))}`}>
+            <Link
+              to={`/dogDetail/${encodeURIComponent(JSON.stringify(dog))}`}
+              className="dog-link"
+            >
               {dog.name}
             </Link>
           </li>
