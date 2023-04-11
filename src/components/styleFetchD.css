@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(4deg, #d2001a, #7462ff);
+  background: linear-gradient(4deg, #d2001a, #7462ff, #f2ff62, #d2001a);
   background-repeat: repeat;
   background-attachment: fixed;
 }
@@ -9,6 +9,8 @@ body {
   padding: 1em;
   gap: 1em;
   object-fit: cover;
+  border-color: black;
+  border-width: 25px;
   grid-template-columns: repeat(1, 1fr);
 }
 
@@ -16,6 +18,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
