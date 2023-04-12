@@ -7,22 +7,22 @@
 
 @media (max-width: 768px) {
   .welcome img {
-    display: none; /* Dölj alla bilder i början */
+    display: none;
   }
 
   .welcome img:nth-child(2) {
-    display: block; /* Visa bara den andra bilden (mittbilden) */
-    width: 100%; /* Anpassa bredden till 100% */
-    height: auto; /* Låt höjden anpassas proportionellt */
-    margin: 0 auto; /* Centrera bilden */
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .welcome p {
-    font-size: 16px; /* Anpassa textens storlek */
-    text-align: center; /* Centrera texten */
-    white-space: nowrap; /* Förhindra radbrytning */
-    overflow: hidden; /* Dölj överflödig text */
-    text-overflow: ellipsis; /* Lägg till ellipsis (...) om texten är för lång */
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis (welcome);
   }
 }
 
@@ -50,4 +50,9 @@
   border-radius: 65px;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 768px) {
+  .welcome h1 {
+    font-size: 16px;
+  }
 }

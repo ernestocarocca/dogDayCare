@@ -6,7 +6,7 @@ body {
 
 .showDogs {
   display: grid;
-  padding: 6em;
+  padding: 1em;
   gap: 1em;
   object-fit: cover;
   border-color: black;
