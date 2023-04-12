@@ -1,22 +1,29 @@
-/* Gemensam stil för större skärmar */
 .welcome img {
   width: 350px;
   height: 500px;
   object-fit: cover;
+  transition: transform 0.1s ease-in-out;
 }
 
-.welcome img {
-  display: inline;
-}
+@media (max-width: 768px) {
+  .welcome img {
+    display: none; /* Dölj alla bilder i början */
+  }
 
-.welcome img {
-  grid-template-columns: repeat(1, 1fr);
-}
+  .welcome img:nth-child(2) {
+    display: block; /* Visa bara den andra bilden (mittbilden) */
+    width: 100%; /* Anpassa bredden till 100% */
+    height: auto; /* Låt höjden anpassas proportionellt */
+    margin: 0 auto; /* Centrera bilden */
+  }
 
-.welcome h1 {
-  background-image: url("./img/hund2.jpg");
-  color: white;
-  border-radius: 65px;
+  .welcome p {
+    font-size: 16px; /* Anpassa textens storlek */
+    text-align: center; /* Centrera texten */
+    white-space: nowrap; /* Förhindra radbrytning */
+    overflow: hidden; /* Dölj överflödig text */
+    text-overflow: ellipsis; /* Lägg till ellipsis (...) om texten är för lång */
+  }
 }
 
 .welcome .Button {
@@ -27,15 +34,7 @@
 .welcome p {
   color: black;
   font-size: 20px;
-  font-style: bold;
-}
-
-.welcome img {
-  width: 350px;
-  height: 500px;
-  object-fit: cover;
-  display: inline;
-  transition: transform 0.1s ease-in-out;
+  font-weight: bold;
 }
 
 .welcome img:hover {
@@ -51,26 +50,4 @@
   border-radius: 65px;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 767px) {
-  .welcome h1 {
-    font-size: 24px;
-    border-radius: 0;
-    position: relative;
-    overflow: hidden;
-  }
-  .welcome h1::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, red, yellow, blue);
-    z-index: -1;
-    animation: shimmer 1s linear infinite;
-    opacity: 0; /* För att initialt göra glimret osynligt */
-  }
 }

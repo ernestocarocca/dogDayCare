@@ -6,11 +6,11 @@ body {
 
 .showDogs {
   display: grid;
-  padding: 1em;
+  padding: 6em;
   gap: 1em;
   object-fit: cover;
   border-color: black;
-  border-width: 25px;
+
   grid-template-columns: repeat(1, 1fr);
 }
 
