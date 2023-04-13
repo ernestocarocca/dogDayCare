@@ -31,7 +31,7 @@ const FetchDogs = (props) => {
             to={`/dogDetail/${encodeURIComponent(JSON.stringify(dog))}`}
             className="dog-link"
           >
-            <button> {dog.name}</button>
+            <button className="ButtonFetchOneDog"> {dog.name}</button>
           </Link>
         </div>
       ))}
