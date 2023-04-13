@@ -1,14 +1,14 @@
-body {
-  background: linear-gradient(4deg, #d2001a, #7462ff, #f2ff62, #d2001a);
-  background-repeat: repeat;
-  background-attachment: fixed;
-}
 .ButtonFetchOneDog {
   background-color: transparent;
   font-size: 25px;
   font-weight: bold;
+  color: black;
 }
 .showDogs {
+  background: linear-gradient(4deg, #d2001a, #7462ff, #f2ff62, #d2001a);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-color: transparent;
   display: grid;
   padding: 1em;
   gap: 1em;
@@ -30,7 +30,6 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .showDogs img:hover {
