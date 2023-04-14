@@ -19,12 +19,12 @@
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  /* Uppdatera följande egenskaper för guld kanter */
+
   border: 2px solid #363530;
   box-shadow: 0 0 20px #363530;
   border: 2px solid #363530;
   box-shadow: 0 0 20px #363530;
-  position: relative; /* Lägg till position: relative för att shimmer ska fungera */
+  position: relative;
   overflow: hidden;
 }
 
@@ -39,13 +39,9 @@
   box-shadow: none;
 }
 
-/* Media query för mobila enheter med en maxbredd på 768px */
 @media (min-width: 768px) {
   .showDogs {
-    grid-template-columns: repeat(
-      4,
-      1fr
-    ); /* Återställ grid-template-columns för större skärmar */
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .showDogs img {

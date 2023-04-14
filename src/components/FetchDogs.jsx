@@ -3,7 +3,7 @@ import "./styleFetchD.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const FetchDogs = (props) => {
+const FetchDogs = () => {
   const [counter, setCounter] = useState(0);
   const [dogs, setDogs] = useState([]);
   const fetchDog = () => {
@@ -12,7 +12,6 @@ const FetchDogs = (props) => {
         return response.json();
       })
       .then((data) => {
-        // setDogs(data.record); // sätt dogs till = dogArray
         setDogs(data.record);
       });
   };

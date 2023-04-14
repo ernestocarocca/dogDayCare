@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FetchDogs from "./FetchDogs";
 import { useLocation } from "react-router-dom";
-const dogDetail = (props) => {
+const dogDetail = () => {
   const [currentDog, setCurrentDog] = useState([]);
   let navigate = useNavigate();
   const params = useParams();

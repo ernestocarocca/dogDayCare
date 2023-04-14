@@ -15,7 +15,7 @@
   box-shadow: 0 0 20px #363530;
   border: 2px solid #363530;
   box-shadow: 0 0 20px #363530;
-  position: relative; /* Lägg till position: relative för att shimmer ska fungera */
+  position: relative;
   overflow: hidden;
 }
 

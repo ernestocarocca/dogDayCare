@@ -5,7 +5,7 @@ import dog1 from "./img/hundt1.jpg";
 import dog2 from "./img/hund2.jpg";
 import dog3 from "./img/dog3.jpg";
 
-const Welcome = (props) => {
+const Welcome = () => {
   return (
     <section className="welcome">
       <img src={dog1} alt="" />
