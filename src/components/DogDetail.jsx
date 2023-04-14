@@ -13,11 +13,17 @@ const dogDetail = (props) => {
   return (
     <div className="DD">
       <img src={dog.img} alt="" />
+      <h2>Dog</h2>
       <h3>Name: {dog.name}</h3>
       <h3>Age: {dog.age}</h3>
       <h3>Breed: {dog.breed}</h3>
       <h3>Sex: {dog.sex}</h3>
-      <h4>Chipnr: {dog.chipNumber}</h4>
+      <h4>Chipnr: {dog.chipNumber} </h4>
+      <h>Owner</h>
+      <h4>
+        {dog.owner.name} {""}
+        {dog.owner.lastName}
+      </h4>
     </div>
   );
 };

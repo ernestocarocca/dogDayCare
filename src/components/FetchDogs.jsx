@@ -20,8 +20,6 @@ const FetchDogs = (props) => {
     fetchDog();
   }, []);
 
-  //<img src={dogs[counter].img} alt="img" />
-
   return (
     <div className="showDogs">
       {dogs.map((dog, index) => (

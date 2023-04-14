@@ -5,10 +5,6 @@
   color: black;
 }
 .showDogs {
-  background: linear-gradient(4deg, #d2001a, #7462ff, #f2ff62, #d2001a);
-  background-repeat: repeat;
-  background-attachment: fixed;
-  background-color: transparent;
   display: grid;
   padding: 1em;
   gap: 1em;
@@ -22,8 +18,14 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Uppdatera följande egenskaper för guld kanter */
+  border: 2px solid #363530;
+  box-shadow: 0 0 20px #363530;
+  border: 2px solid #363530;
+  box-shadow: 0 0 20px #363530;
+  position: relative; /* Lägg till position: relative för att shimmer ska fungera */
+  overflow: hidden;
 }
 
 .showDogs img {
